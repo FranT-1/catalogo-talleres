@@ -1,5 +1,6 @@
 import { useState } from "react";
 import estilos from "./TarjetaTaller.module.css";
+import Boton from "../Boton/Boton";
 
 export default function TarjetaTaller({ taller }) {
   const { titulo, categoria, cupo, inscriptos, nuevo, descripcion } = taller;
@@ -14,7 +15,7 @@ export default function TarjetaTaller({ taller }) {
   else if (libres <= 3) estado = estilos.pocos;
 
   //segun estado
-  const clases = [estilos.tarjeta, estado, expandida && estilos.expandida]
+  const clases = [estilos.tarjeta, estado, expandida && estilos.expandida, vista === "lista" && estilos.lista]
     .filter(Boolean)
     .join(" ");
 
@@ -29,9 +30,9 @@ export default function TarjetaTaller({ taller }) {
         <div className={estilos.relleno} style={{ width: `${porcentaje}%` }} />
       </div>
 
-      <button onClick={() => setExpandida(!expandida)}>
+      <Boton variante="secundario" activo={expandida} onClick={() => setExpandida(!expandida)}>
         {expandida ? "Ocultar detalles" : "Ver detalles"}
-      </button>
+      </Boton>
       {expandida && <p>{descripcion}</p>}
     </article>
   );

@@ -1,0 +1,26 @@
+.boton {
+  padding: 0.4rem 0.9rem;
+  border: 2px solid var(--primario);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primario {
+  background: var(--primario);
+  color: var(--superficie);
+}
+
+.secundario {
+  background: transparent;
+  color: var(--primario);
+}
+
+.activo {
+  box-shadow: 0 0 0 3px var(--alerta);
+}
+
+.boton:focus-visible {
+  outline: 3px solid var(--alerta);
+  outline-offset: 2px;
+}
