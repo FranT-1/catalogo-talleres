@@ -1,0 +1,24 @@
+:root {
+  --fondo: ghostwhite;
+  --superficie: white;
+  --texto: darkslategray;
+  --primario: royalblue;
+  --exito: seagreen;
+  --alerta: darkorange;
+  --peligro: crimson;
+}
+
+[data-tema="oscuro"] {
+  --fondo: black;
+  --superficie: darkslategray;
+  --texto: whitesmoke;
+  --primario: cornflowerblue;
+  --exito: lightgreen;
+  --alerta: orange;
+  --peligro: tomato;
+}
+
+body {
+  background-color: var(--fondo);
+  color: var(--texto);
+}

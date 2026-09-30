@@ -1,0 +1,53 @@
+.tarjeta {
+  position: relative;
+  height: 100%;
+  padding: 1.25rem;
+  background: var(--superficie);
+  color: var(--texto);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.disponible {
+  border-color: var(--exito);
+}
+
+.pocos {
+  border-color: var(--alerta);
+}
+
+.completo {
+  opacity: 0.5;
+}
+
+.expandida {
+  border-color: var(--primario);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.etiqueta {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  background: var(--primario);
+  color: var(--superficie);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.barra {
+  height: 8px;
+  margin-bottom: 1rem;
+  background: var(--fondo);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.relleno {
+  height: 100%;
+  background: var(--primario);
+}
