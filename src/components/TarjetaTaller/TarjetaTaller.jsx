@@ -8,12 +8,12 @@ export default function TarjetaTaller({ taller }) {
   const libres = cupo - inscriptos;
   const porcentaje = Math.round((inscriptos / cupo) * 100);
 
-  //datos
+  //segun datos
   let estado = estilos.disponible;
   if (libres === 0) estado = estilos.completo;
   else if (libres <= 3) estado = estilos.pocos;
 
-  //estado
+  //segun estado
   const clases = [estilos.tarjeta, estado, expandida && estilos.expandida]
     .filter(Boolean)
     .join(" ");
