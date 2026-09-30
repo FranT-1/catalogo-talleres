@@ -2,7 +2,7 @@ import { useState } from "react";
 import estilos from "./TarjetaTaller.module.css";
 import Boton from "../Boton/Boton";
 
-export default function TarjetaTaller({ taller }) {
+export default function TarjetaTaller({ taller, vista}) {
   const { titulo, categoria, cupo, inscriptos, nuevo, descripcion } = taller;
   const [expandida, setExpandida] = useState(false);
 
